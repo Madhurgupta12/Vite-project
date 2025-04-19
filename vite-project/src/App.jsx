@@ -24,7 +24,7 @@ const Repos = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold mb-6">🗂️ Your GitHub Repositories</h1>
+        <className="text-3xl font-bold mb-6">🗂️ Your GitHub Repositories</h1>
 
         {repos.length === 0 ? (
           <p className="text-gray-400">Fetching repos...</p>
@@ -40,7 +40,7 @@ const Repos = () => {
                   {repo.description || 'No description'}
                 </p>
                 <button
-                  onClick={() => handleSelect(repo)}
+                  {() => handleSelect(repo)}
                   className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-sm font-semibold"
                 >
                   Select Repo
